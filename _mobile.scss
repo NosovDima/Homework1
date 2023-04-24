@@ -1,0 +1,62 @@
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 735px;
+    background-image: url(Images/backgroundSKY.jpg);
+    background-size: cover;
+    background-position-x: 31%;
+    background-repeat: no-repeat;
+  }
+  .text__break {
+    display: none;
+  }
+  .top__content {
+    padding-top: 238px;
+  }
+  .top__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .top__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .top__button {
+    width: 234px;
+    height: 48px;
+    margin-top: 32px;
+  }
+  .button__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .top__form {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-game {
+    display: grid;
+  }
+  .nav__item {
+    grid-column: span 12;
+    width: 343px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
