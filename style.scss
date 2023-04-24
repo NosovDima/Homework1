@@ -3,11 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Montserrat", sans-serif;
 }
-
 .top {
   height: 1024px;
   background-image: url(Images/backgroundSKY.jpg);
@@ -15,16 +13,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
 }
-
 .top__content {
   padding-top: 217px;
 }
-
 .top__title {
   font-family: "Montserrat";
   font-style: normal;
@@ -33,7 +28,6 @@ body {
   line-height: 78px;
   color: #ffffff;
 }
-
 .top__text {
   font-family: "Montserrat";
   font-style: normal;
@@ -52,7 +46,6 @@ body {
   border-radius: 30px;
   margin-top: 44px;
 }
-
 .button__text {
   font-family: "Montserrat";
   font-style: normal;
@@ -62,11 +55,9 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-
 .text-bold {
   font-weight: bold;
 }
-
 .nav-game {
   height: auto;
   display: grid;
@@ -76,7 +67,6 @@ body {
   padding-top: 128px;
   padding-bottom: 128px;
 }
-
 .nav__item {
   grid-column: span 4;
   height: 300px;
@@ -87,22 +77,18 @@ body {
   padding: 32px;
   background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%);
 }
-
 .nav__item_1 {
   background-image: url(Images/game1.jpg);
   background-repeat: no-repeat;
 }
-
 .nav__item_2 {
   background-image: url(Images/game2.jpg);
   background-repeat: no-repeat;
 }
-
 .nav__item_3 {
   background-image: url(Images/game3.jpg);
   background-repeat: no-repeat;
 }
-
 .nav__text {
   font-family: "Montserrat";
   font-style: normal;
@@ -112,66 +98,4 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
-
-@media (max-width: 767px) {
-  .center {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .top {
-    height: 735px;
-    background-image: url(Images/backgroundSKY.jpg);
-    background-size: cover;
-    background-position-x: 31%;
-    background-repeat: no-repeat;
-  }
-  .text__break {
-    display: none;
-  }
-  .top__content {
-    padding-top: 238px;
-  }
-  .top__title {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-  }
-  .top__text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-  }
-  .top__button {
-    width: 234px;
-    height: 48px;
-    margin-top: 32px;
-  }
-  .button__text {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-  }
-  .top__form {
-    display: flex;
-    justify-content: center;
-  }
-  .nav-game {
-    display: grid;
-  }
-  .nav__item {
-    grid-column: span 12;
-    width: 343px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}/*# sourceMappingURL=style.css.map */
+@import "mobile";
