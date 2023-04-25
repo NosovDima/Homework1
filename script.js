@@ -1,7 +1,7 @@
 // Exercise 1
-let a = 10;
+let z = 10;
 alert(a);
-a = 20;
+z = 20;
 alert(a);
 // Exercise 2
 let info = "First Iphone  date release";
