@@ -1,18 +1,18 @@
 // Exercise 1
 let a = 10;
 alert(a);
-let b = 20;
-alert(b);
+a = 20;
+alert(a);
 // Exercise 2
 let info = "First Iphone  date release";
 alert(info);
-let year = "2007";
+const year = "2007";
 alert(year);
 // Exercise 3
 let info = "JavaScript inventor";
 alert(info);
-let inventor = "Brendan Eich";
-/alert(inventor);
+const inventor = "Brendan Eich";
+alert(inventor);
 // Exercise 4
 let y = 2;
 let x = 10;
@@ -54,7 +54,7 @@ const user = {
 user.age = 17;
 user["city of residence"];
 delete user["city of residence"];
-user.info = prompt("Какую информацию хотите узнать о пользователе?");
+const info = prompt("Какую информацию хотите узнать о пользователе?");
 alert(user.info);
 // Exercise 10
 let nickname = prompt("Как к Вам обращаться?");
