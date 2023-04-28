@@ -98,4 +98,62 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+.footer {
+  background-color: #000915;
+  &__content {
+    display: flex;
+    gap: 135px;
+    padding-bottom: 233px;
+    padding-top: 233px;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.footer__heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #ffffff;
+}
+.footer__text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.footer__form {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+.footer__button {
+  width: 234px;
+  height: 48px;
+  background: #9c0332;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+.footer__image {
+  width: 485px;
+  height: 333px;
+}
+.nav__item:hover {
+  border: 3px solid #44d2ff;
+}
+.top__button:hover {
+  background: #eb443f;
+  border-radius: 30px;
+}
+.footer__button:hover {
+  background: #eb443f;
+  border-radius: 30px;
+}
+
 @import "mobile";
