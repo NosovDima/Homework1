@@ -32,7 +32,7 @@
 // for (const salary in obj) {
 //   alert(salary + " — зарплата " + obj[salary] + " долларов");
 // }
-// Exercise 5
+// Exercise 5 Можно ли с помощью этого цикла сделать?
 // let n = 1000;
 // let num = 0;
 
@@ -51,3 +51,11 @@
 //   alert(num);
 // }
 // alert("Iterated " + num + " times!");
+// Exercise 6
+let day = 5;
+for (let day = 5; day <= 31; day += 7) {
+    // почему +=? почему +=7 не в фигурных скобках?
+  alert(
+    "Сегодня пятница, " + day + " -е число. Необходимо подготовить отчет.!"
+  );
+}
