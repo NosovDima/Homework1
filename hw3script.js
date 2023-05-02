@@ -85,40 +85,72 @@
 //   ? alert("Установите версию приложения для iOS по ссылке")
 //   : alert("Установите версию приложения для Android по ссылке");
 // Exercise 9
-let year = prompt("Какого года выпуска Ваш телефон?");
-let clientOS = prompt("Если Ваша операционная система IOS введите 0");
-if (year < 2015 && clientOS == 0) {
-  alert("Установите облегченную версию приложения для iOS по ссылке");
-} else if (year >= 2015 && clientOS == 0) {
-  alert("Установите версию приложения для iOS по ссылке");
-} else if (year >= 2015 && clientOS !== 0) {
-  alert("Установите версию приложения для Android по ссылке");
-} else {
-  alert("Установите облегченную версию приложения для Android по ссылке");
-}
-{
-}
-{
-}
-
-// Exercise 9
 // let year = prompt("Какого года выпуска Ваш телефон?");
-// let url = year >= 2015 ? (prompt("Если Ваша операционная система IOS введите 0")) :
-
-//
-// let year = prompt("Какого года выпуска Ваш телефон?");
-// let clientOS = 0;
-// if (year >= 2015) {
-//   prompt("Если Ваша операционная система IOS введите 0");
-// } else if (clientOS == 0) {
-//   alert("Установите версию приложения для IOS по ссылке");
-// } else {
+// let clientOS = prompt("Если Ваша операционная система IOS введите 0");
+// if (year < 2015 && clientOS == 0) {
+//   alert("Установите облегченную версию приложения для iOS по ссылке");
+// } else if (year >= 2015 && clientOS == 0) {
+//   alert("Установите версию приложения для iOS по ссылке");
+// } else if (year >= 2015 && clientOS !== 0) {
 //   alert("Установите версию приложения для Android по ссылке");
+// } else {
+//   alert("Установите облегченную версию приложения для Android по ссылке");
 // }
 // {
-//   prompt("Если Ваша операционная система Android введите 1");
-//   if (clientOS == 0) {
-//   alert("Установите версию приложения для IOS по ссылке");
-// } else {
-//   alert("Установите версию приложения для Android по ссылке");
 // }
+// {
+// }
+// Exercise 1
+// let i = 0;
+
+// while (i < 2) {
+//   alert("Привет");
+
+//   i++;
+// }
+// Exercise 2
+// let i = 1;
+
+// while (i <= 5) {
+//   alert(i);
+
+//   i++;
+// }
+// Exercise 3
+// let i = 7;
+
+// while (i <= 22) {
+//   alert(i);
+
+//   i++;
+// }
+// Exercise 4
+// const obj = {
+//   Коля: 200,
+//   Вася: 300,
+//   Петя: 400,
+// };
+
+// for (const salary in obj) {
+//   alert(salary + " — зарплата " + obj[salary] + " долларов");
+// }
+// Exercise 5
+// let n = 1000;
+// let num = 0;
+
+// do {
+//   n / 2;
+//   num++;
+//   alert(n);
+// } while (n < 50);
+
+// alert("Iterated " + num + " times!");
+// Exercise 5
+// let n = 1000;
+// let num = 0;
+// for (n, num; n >= 50; num++) {
+//   n = n / 2;
+//   alert(num);
+// }
+// alert("Iterated " + num + " times!");
+// Exercise 6

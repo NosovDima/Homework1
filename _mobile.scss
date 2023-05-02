@@ -73,9 +73,13 @@
     font-size: 14px;
     line-height: 22px;
   }
-  .footer__content {
+  .footer____game-1 {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer____game-2 {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .footer__image {
     width: 344px;

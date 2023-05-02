@@ -116,7 +116,13 @@ body {
 .footer {
   background-color: #000915;
 }
-.footer__content {
+.footer__game-1 {
+  display: flex;
+  gap: 135px;
+  padding-bottom: 233px;
+  padding-top: 233px;
+}
+.footer__game-2 {
   display: flex;
   gap: 135px;
   padding-bottom: 233px;
@@ -254,9 +260,13 @@ body {
     font-size: 14px;
     line-height: 22px;
   }
-  .footer__content {
+  .footer____game-1 {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer____game-2 {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .footer__image {
     width: 344px;

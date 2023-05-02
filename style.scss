@@ -100,7 +100,13 @@ body {
 }
 .footer {
   background-color: #000915;
-  &__content {
+  &__game-1 {
+    display: flex;
+    gap: 135px;
+    padding-bottom: 233px;
+    padding-top: 233px;
+  }
+  &__game-2 {
     display: flex;
     gap: 135px;
     padding-bottom: 233px;
