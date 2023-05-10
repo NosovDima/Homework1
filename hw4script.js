@@ -52,10 +52,28 @@
 // }
 // alert("Iterated " + num + " times!");
 // Exercise 6
-let day = 5;
-for (let day = 5; day <= 31; day += 7) {
-  // почему +=? почему +=7 не в фигурных скобках???
-  alert(
-    "Сегодня пятница, " + day + " -е число. Необходимо подготовить отчет.!"
-  );
+// let day = 5;
+// for (let day = 5; day <= 31; day += 7) {
+//   // почему +=? почему +=7 не в фигурных скобках???
+//   alert(
+//     "Сегодня пятница, " + day + " -е число. Необходимо подготовить отчет.!"
+//   );
+// }
+
+// Exercise 7
+// const obj = {
+//   Але: "ша",
+//   Гри: "ша",
+//   Ди: "ма",
+// };
+// for (const capital in obj) {
+//   alert(capital + "- это " + obj[capital]);
+// }
+const obj = {
+  Baby: "Boss",
+  Art: "Museum",
+  Assassin: "creed Brotherhood",
+};
+for (const game in obj) {
+  alert(game + "'S " + obj[game]);
 }

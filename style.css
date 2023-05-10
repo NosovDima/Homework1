@@ -128,6 +128,16 @@ body {
   padding-bottom: 233px;
   padding-top: 233px;
 }
+.footer__game-3 {
+  background-image: url(Images/background_for_games.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 233px;
+  padding-top: 233px;
+  padding-left: calc(-50vw + 10%);
+  padding-right: calc(-50vw + 10%);
+}
 .footer__title {
   display: flex;
   flex-direction: column;
@@ -157,6 +167,10 @@ body {
   justify-content: center;
   align-self: flex-start;
 }
+.footer__form-3 {
+  display: flex;
+  justify-content: center;
+}
 
 .footer__button {
   width: 234px;
@@ -183,6 +197,14 @@ body {
 .footer__button:hover {
   background: #eb443f;
   border-radius: 30px;
+}
+
+.footer__title-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
