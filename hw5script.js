@@ -117,7 +117,7 @@ alert(mult(prompt("Введите первое число")));
 // alert(circle1.getPerimeter());
 // alert(circle2.getArea());
 // alert(circle2.getPerimeter());
-// Exercise 8
+//// Exercise 8
 const season = (a) => {
   if (isNaN(a)) {
     return "Вы ввели не число";
