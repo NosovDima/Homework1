@@ -13,7 +13,7 @@
 //   return a < b ? a : b;
 // }
 // console.log(min(4, 8));
-// // Exercise 2
+// Exercise 2
 // const evenNum = (a) => {
 //   if (a % 2 == 0) {
 //     return "Четное число";
@@ -23,11 +23,11 @@
 //   // Как сделать с prompt?
 // };
 // alert(evenNum(7));
-// //or
+//or
 
-// let Number = prompt("Введите число");
+// let number = prompt("Введите число");
 
-// if (a % 2 == 0) {
+// if (number % 2 == 0) {
 //   function evenNum() {
 //     alert("Четное число");
 //   }
@@ -35,8 +35,8 @@
 //   function evenNum() {
 //     alert("Нечетное число");
 //   }
-//   // Почему не работает?
 // }
+// evenNum();
 // // or
 // function evenNum(a) {
 //   return a % 2 == 0 ? "Четное число" : "Нечетное число";
@@ -72,33 +72,25 @@
 // {
 // }
 // printMessage();
-// // Exercise 5
-// const userNumber1 = prompt("Введите первое число");
-// const userNumber2 = prompt("Введите второе число");
-// if (isNan(userNumber1 || userNumber2)) {
-//   function printMessage() {
-//     alert("Одно или оба значения не являются числом");
-//   }
-// } else {
-//   function mult() {
-//     return a * b;
-//   }
-// }
-// printMessage();
-// mult();
+// Exercise 5
+const mult = (a, b) => {
+  if (isNaN(a) || isNaN(b)) {
+    return "Одно или оба значения не являются числом";
+  }
+  let result = a * b;
+  return result;
+};
+alert(mult(prompt("Введите первое число"), prompt("Введите второе число")));
+
 // // Exercise 6
-// let num = prompt("Введите число");
-// if ((num) => !isNaN(num)) {
-//   function printMessage() {
-//     alert("Переданный параметр не является числом");
-//   }
-// } else {
-//   function mult(a) {
-//     return a ** 3;
-//   }
-// }
-// printMessage();
-// mult();
+const mult = (a) => {
+  if (isNaN(a)) {
+    return "Значение не является числом";
+  }
+  let result = a ** 3;
+  return result;
+};
+alert(mult(prompt("Введите первое число")));
 // // Exercise 7
 // function getСircleArea() {
 //   return this.radius ** 2 * Math.PI;
@@ -126,38 +118,27 @@
 // alert(circle2.getArea());
 // alert(circle2.getPerimeter());
 // Exercise 8
-let season = prompt("Введите номер месяца");
-if (season > 0 && season < 3) {
-  function printMessage() {
-    alert("Зима");
+const season = (a) => {
+  if (isNaN(a)) {
+    return "Вы ввели не число";
   }
-} else if (season > 2 && season < 6) {
-  function printMessage() {
-    alert("Весна");
+  if (a === 12 || (a >= 1 && a <= 2)) {
+    // Ошибка в синтаксисе? Не видит число 12
+    return "Зима";
+  } else if (a >= 3 && a <= 5) {
+    return "Весна";
+  } else if (a >= 6 && a <= 8) {
+    return "Лето";
+  } else if (a >= 9 && a <= 11) {
+    return "Осень";
+  } else {
+    return "Такого месяца не существует";
   }
-} else if (season > 5 && season < 9) {
-  function printMessage() {
-    alert("Лето");
+  {
   }
-} else if (season > 8 && season < 12) {
-  function printMessage() {
-    alert("Осень");
+  {
   }
-} else if (season == 12) {
-  function printMessage() {
-    alert("Зима");
+  {
   }
-} else {
-  function printMessage() {
-    alert("Такого месяца не существует");
-  }
-}
-{
-}
-{
-}
-{
-}
-{
-}
-printMessage();
+};
+alert(season(prompt("Введите номер месяца")));
