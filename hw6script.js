@@ -19,10 +19,11 @@ newspaper.movies.writers[1];
 const numbers = [1, 5, 4, 10, 0, 3];
 
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] <= 10) break;
-  //   почему Undefined ?
   alert(numbers[i]);
+  if (numbers[i] === 10) break;
+  
 }
+
 // Exersice 2
 const numbers = [1, 5, 4, 10, 0, 3];
 alert(numbers.indexOf(4));
@@ -39,7 +40,7 @@ for (let i = 0; i < 3; i++) {
     arr[i][a] = 1;
   }
 }
-alert(arr)
+alert(arr);
 // Exersice 5
 let numbers = [1, 1, 1];
 numbers.push(2, 2, 2);
