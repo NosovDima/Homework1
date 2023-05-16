@@ -31,11 +31,15 @@ let numbers = [1, 3, 5, 10, 20];
 numbers = numbers.join(" ");
 alert(numbers);
 // Exersice 4
-let array = [
-  [1, 1],
-  [1, 1],
-  [1, 1],
-];
+
+const arr = [];
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  for (let a = 0; a < 3; a++) {
+    arr[i][a] = 1;
+  }
+}
+alert(arr)
 // Exersice 5
 let numbers = [1, 1, 1];
 numbers.push(2, 2, 2);
