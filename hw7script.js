@@ -2,18 +2,31 @@
 let str = "js";
 alert(str.toLocaleUpperCase());
 // Exrecise 2
-
-const arr = {
-  animals: ["Кошка", "Кит", "Комар", "Носорог"],
-  product: ["яблоко", "груша", "гриб", "огурец"],
-  building: ["Дом", "Банк", "Больница", "Театр"],
-};
-const search = "ко";
-arr.forEach((arr) => {
-  if (arr.toLowerCase().startWith(search.toLowerCase())) {
-    alert(arr);
-  }
-});
+function searchStart(arr, subString) {
+  const arr = {
+    animals: ["Кошка", "Кит", "Комар", "Носорог"],
+    product: ["яблоко", "груша", "гриб", "огурец"],
+    building: ["Дом", "Банк", "Больница", "Театр"],
+  };
+  const search = "ко";
+  arr.forEach((item) => {
+    if (arr.toLowerCase().startWith(search.toLowerCase())) {
+      alert(arr);
+    }
+  });
+  const search2 = "гру";
+  arr.forEach((item) => {
+    if (arr.toLowerCase().startWith(search2.toLowerCase())) {
+      alert(arr);
+    }
+  });
+  const search3 = "Кино";
+  arr.forEach((item) => {
+    if (arr.toLowerCase().startWith(search3.toLowerCase())) {
+      alert(arr);
+    }
+  });
+}
 // можно ли сделать одну функцию для всего массива?
 
 searchStart(["Кошка", "Кит", "Комар", "Носорог"], "ко"); // ['кошка', 'комар']
@@ -179,7 +192,7 @@ function wordsGame() {
     "Мандарин",
   ];
   arr = arr.sort(() => Math.random() - 0.5);
-  alert(arr); 
+  alert(arr);
   // как добавить пробел в alert arr, чтобы при этом ответы можно было вводить без пробела?
   let userAnswer1 = prompt("Чему равнялся первый элемент массива?");
   let userAnswer2 = prompt("Чему равнялся первый элемент массива?");
