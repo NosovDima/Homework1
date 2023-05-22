@@ -50,5 +50,34 @@ const people = [
 
 people.sort(function (eld, young) {
   return eld.age - young.age;
+  //   alert(people.sort(function (eld, young) {
+  //   return eld.age - young.age;)
+  // почему без alert работет как нужно, а с alert нет?
 });
+// Exersice 2
+function isPositive(num) {
+  return num > 0;
+}
+function isMale(person) {
+  return person.gender == "male";
+}
+function filter(arr, ruleFunction) {
+  const output = [];
+  arr.map((el) => {
+    if (ruleFunction(el)) {
+      output.push(el);
+    }
+  });
+  return output;
+}
 
+console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
+
+const people = [
+  { name: "Глеб", gender: "male" },
+  { name: "Анна", gender: "female" },
+  { name: "Олег", gender: "male" },
+  { name: "Оксана", gender: "female" },
+];
+
+console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]

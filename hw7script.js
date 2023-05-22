@@ -3,30 +3,17 @@ let str = "js";
 alert(str.toLocaleUpperCase());
 // Exrecise 2
 function searchStart(arr, subString) {
-  const arr = {
-    animals: ["Кошка", "Кит", "Комар", "Носорог"],
-    product: ["яблоко", "груша", "гриб", "огурец"],
-    building: ["Дом", "Банк", "Больница", "Театр"],
-  };
-  const search = "ко";
-  arr.forEach((item) => {
-    if (arr.toLowerCase().startWith(search.toLowerCase())) {
-      alert(arr);
+  arr.forEach((element) => {
+    if (element.toLowerCase().startsWith(subString.toLowerCase())) {
+      alert(element);
     }
   });
-  const search2 = "гру";
-  arr.forEach((item) => {
-    if (arr.toLowerCase().startWith(search2.toLowerCase())) {
-      alert(arr);
-    }
-  });
-  const search3 = "Кино";
-  arr.forEach((item) => {
-    if (arr.toLowerCase().startWith(search3.toLowerCase())) {
-      alert(arr);
-    }
-  });
+  return null;
 }
+const animals = ["Кошка", "Кит", "Комар", "Носорог"];
+const products = ["яблоко", "груша", "гриб", "огурец"];
+const buildings = ["Дом", "Банк", "Больница", "Театр"];
+
 // можно ли сделать одну функцию для всего массива?
 
 searchStart(["Кошка", "Кит", "Комар", "Носорог"], "ко"); // ['кошка', 'комар']
