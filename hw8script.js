@@ -81,3 +81,59 @@ const people = [
 ];
 
 console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+// Exercise (my test)
+// function getEvenNumbers(num) {
+//   return num % 2 === 0;
+// }
+// function filter(arr, ruleFunction) {
+//   const output = [];
+//   arr.map((el) => {
+//     if (ruleFunction(el)) {
+//       output.push(el);
+//     }
+//   });
+//   return output;
+// }
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const evenNumbers = filter(numbers, getEvenNumbers);
+// alert(evenNumbers);
+// Exercise 3
+const timer = (deadline) => {
+  const interval = setInterval(() => {
+    let myDate = new Date();
+    console.log(myDate.toLocaleTimeString());
+  }, 3000);
+  setTimeout(() => {
+    clearInterval(interval);
+    console.log("30 секунд прошло");
+  }, deadline * 1000);
+};
+timer(30);
+// Exercise 4
+function delayForSecond(callback) {
+  setTimeout(function () {
+    console.log("Привет, Глеб!");
+    callback();
+  }, 1000);
+}
+
+delayForSecond(function () {
+  alert("Привет, Глеб!");
+});
+// Exercise 5
+
+function delayForSecond(cb) {
+  setTimeout(() => {
+    console.log("Прошла одна секунда");
+    if (cb) {
+      cb();
+    }
+  }, 1000);
+}
+
+function sayHi(name) {
+  console.log(`Привет, ${name}!`);
+}
+
+
+delayForSecond(() => sayHi("Глеб"));
