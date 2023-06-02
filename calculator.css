@@ -1,0 +1,36 @@
+.calculator {
+  width: 300px;
+  margin: auto;
+}
+input {
+  width: 100%;
+  border: none;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 20px;
+  font-size: 25px;
+  text-align: right;
+}
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #262626;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0d0d0d;
+  color: #fff;
+  transition: 0.5s;
+}
+button#equal-sign {
+  background-color: #f1b21c;
+  color: #260b01;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="input-box" disabled />
+      <table>
+        <tr>
+          <td><button onClick="buttonPressed('C')">C</button></td>
+          <td><button onClick="buttonPressed('%')">%</button></td>
+          <td><button onClick="buttonPressed('^')">^</button></td>
+          <td><button onClick="buttonPressed('/')">/</button></td>
+        </tr>
+        <tr>
+          <td><button onClick="buttonPressed('7')">7</button></td>
+          <td><button onClick="buttonPressed('8')">8</button></td>
+          <td><button onClick="buttonPressed('9')">9</button></td>
+          <td><button onClick="buttonPressed('*')">x</button></td>
+        </tr>
+        <tr>
+          <td><button onClick="buttonPressed('4')">4</button></td>
+          <td><button onClick="buttonPressed('5')">5</button></td>
+          <td><button onClick="buttonPressed('6')">6</button></td>
+          <td><button onClick="buttonPressed('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button onClick="buttonPressed('1')">1</button></td>
+          <td><button onClick="buttonPressed('2')">2</button></td>
+          <td><button onClick="buttonPressed('3')">3</button></td>
+          <td><button onClick="buttonPressed('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button onClick="buttonPressed('0')">0</button></td>
+          <td><button onClick="buttonPressed('.')">.</button></td>
+          <td><button onClick="buttonPressed('(')">(</button></td>
+          <td><button onClick="buttonPressed(')')">)</button></td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <button id="equal-sign" onClick="calculate()">=</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="script10.js"></script>
+  </body>
+</html>
