@@ -1,94 +1,152 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework1</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Проект "Комменты"</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="top center">
-      <section class="top__content">
-        <h1 class="top__title">
-          Добро пожаловать <br />
-          на мой сайт !
-        </h1>
-        <p class="top__text">
-          Вам предстоит пройти несколько увлекательных
-          <br class="text__break" />
-          игр. Если готов нажимай <span class="text-bold">поехали</span> и
-          <span class="text-bold">приступай</span>
-        </p>
-        <form class="top__form" action="#">
-          <button class="top__button">
-            <a class="button__text" href="#">Поехали!</a>
-          </button>
-        </form>
-      </section>
-    </div>
-    <section>
-      <nav class="nav-game center">
-        <a class="nav__item nav__item_1 nav__text" href="#">Игра 1</a>
-        <a class="nav__item nav__item_2 nav__text" href="#">Игра 2</a>
-        <a class="nav__item nav__item_3 nav__text" href="#">Игра 3</a>
-      </nav>
-    </section>
-    <section>
-      <footer class="footer center">
-        <div class="footer__content">
-          <div class="footer__game-1">
-            <div class="footer__title">
-              <h3 class="footer__heading">Времена года!</h3>
-              <p class="footer__text">
-                Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы
-                узнаете к какому времени года он относится
-              </p>
-              <form class="footer__form" action="#">
-                <button class="footer__button">
-                  <a class="button__text" href="#">Играть!</a>
-                </button>
-              </form>
-            </div>
-            <div class="footer__drawing">
-              <img
-                class="footer__image"
-                src="Images/undraw_video_game_night_8h8m 1.png"
-                alt="gamepad"
-              />
-            </div>
-          </div>
-          <div class="footer__game-2">
-            <div class="footer__drawing">
-              <img
-                class="footer__image"
-                src="Images/undraw_gaming_re_cma2 1.png"
-                alt="gamepad"
-              />
-            </div>
-            <div class="footer__title">
-              <h3 class="footer__heading">Запомни слова</h3>
-              <p class="footer__text">
-                При нажатии на кнопку играть, вы увидите несколько слов, которые
-                вам необходимо запомнить.
-              </p>
-              <form class="footer__form" action="#">
-                <button class="footer__button">
-                  <a class="button__text" href="#">Играть!</a>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
 
-    <script src="hw4script.js"></script>
+  <body>
+    <div class="container">
+      <ul id="list" class="comments">
+        <li class="comment">
+          <div class="comment-header">
+            <div>Глеб Фокин</div>
+            <div>12.02.22 12:18</div>
+          </div>
+          <div class="comment-body">
+            <div class="comment-text">
+              Это будет первый комментарий на этой странице
+            </div>
+          </div>
+          <div class="comment-footer">
+            <div class="likes">
+              <span class="likes-counter">3</span>
+              <button class="like-button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="comment">
+          <div class="comment-header">
+            <div>Варвара Н.</div>
+            <div>13.02.22 19:22</div>
+          </div>
+          <div class="comment-body">
+            <div class="comment-text">
+              Мне нравится как оформлена эта страница! ❤
+            </div>
+          </div>
+          <div class="comment-footer">
+            <div class="likes">
+              <span class="likes-counter">75</span>
+              <button class="like-button -active-like"></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="add-form">
+        <input
+          type="text"
+          id="name-input"
+          value=""
+          class="add-form-name"
+          placeholder="Введите ваше имя"
+        />
+        <textarea
+          type="textarea"
+          id="comment-input"
+          value=""
+          class="add-form-text"
+          placeholder="Введите ваш коментарий"
+          rows="4"
+        ></textarea>
+        <div class="add-form-row">
+          <button id="add-button" class="add-form-button">Написать</button>
+        </div>
+      </div>
+    </div>
   </body>
+  <style>
+    .error {
+      background-color: darkred;
+    }
+  </style>
+
+  <script>
+    "use strict";
+    const buttonElement = document.getElementById("add-button");
+    const listElement = document.getElementById("list");
+    const inputNameElement = document.getElementById("name-input");
+    const inputTextElement = document.getElementById("comment-input");
+
+    function toggleButton() {
+      if (inputNameElement.value && inputTextElement.value) {
+        buttonElement.disabled = false;
+        buttonElement.classList.remove("disabled");
+      } else {
+        buttonElement.disabled = true;
+        buttonElement.classList.add("disabled");
+      }
+    }
+
+    inputNameElement.addEventListener("input", toggleButton);
+    inputTextElement.addEventListener("input", toggleButton);
+
+    buttonElement.addEventListener("click", () => {
+      inputNameElement.classList.remove("error");
+      inputTextElement.classList.remove("error");
+
+      if (inputNameElement.value === "") {
+        inputNameElement.classList.add("error");
+        return;
+      }
+
+      if (inputTextElement.value === "") {
+        inputTextElement.classList.add("error");
+        return;
+      }
+
+      const currentDate = new Date().toLocaleString("ru-RU", {
+        hour12: false,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        day: "2-digit",
+        month: "2-digit",
+        year: "2-digit",
+      });
+
+      listElement.innerHTML += `
+    <li class="comment">
+      <div class="comment-header">
+        <div>${inputNameElement.value}</div>
+        <div>${currentDate}</div>
+      </div>
+      <div class="comment-body">
+        <div class="comment-text">
+          ${inputTextElement.value}
+        </div>
+      </div>
+      <div class="comment-footer">
+        <div class="likes">
+          <span class="likes-counter">0</span>
+          <button class="like-button -active-like"></button>
+        </div>
+      </div>
+    </li>
+  `;
+
+      inputNameElement.value = "";
+      inputTextElement.value = "";
+      buttonElement.disabled = true;
+      buttonElement.classList.add("disabled");
+    });
+    inputTextElement.addEventListener("keyup", (event) => {
+      if (event.keyCode === 13 && !buttonElement.disabled) {
+        event.preventDefault();
+        buttonElement.click();
+      }
+    });
+  </script>
 </html>
+<!-- 
